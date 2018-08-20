@@ -6,8 +6,6 @@ const TurndownService = require('turndown')
 const logger = require('./logger')
 const Consul = require('./consul')
 
-const sleep = ms => new Promise(r => setTimeout(r, ms))
-
 Consul.Initialize()
 Consul.Register()
 
@@ -23,8 +21,8 @@ const router = new Router()
 router.post('/tomd', async (ctx, next) => {
     try {
         const { html } = ctx.request.body
-        var turndownService = new TurndownService()
-        var markdown = turndownService.turndown(html)
+        const turndownService = new TurndownService()
+        const markdown = turndownService.turndown(html)
         ctx.status = 200
         ctx.boby = markdown
         await next();
