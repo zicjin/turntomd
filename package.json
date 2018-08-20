@@ -1,0 +1,30 @@
+{
+  "name": "turntomd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/zicjin/turntomd"
+  },
+  "author": "zicjin@gmail.com",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  },
+  "dependencies": {
+    "consul": "^0.34.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "shortid": "^2.2.13",
+    "turndown": "^4.0.2",
+    "winston": "^3.0.0",
+    "winston-elasticsearch": "^0.7.4"
+  }
+}
